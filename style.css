@@ -1,0 +1,38 @@
+/*
+Theme Name: Nova Core Futuristic
+Theme URI: https://example.com/nova-core
+Author: World's No.1 Theme Designer
+Author URI: https://example.com
+Description: A top-tier, ultra-modern, futuristic WordPress theme featuring glassmorphism, neon accents, deep dark layouts, and high-end typography. Designed exclusively for a premium feel.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+Text Domain: novacore
+*/
+
+/* NOTE: Ye theme styling ke liye "Tailwind CSS" use kar rahi hai jo automatically connect ho jayegi. 
+  Agar aapko koi extra custom CSS likhni hai jo theme mein add karni ho, toh wo aap yahan neeche likh sakte hain.
+*/
+
+body { 
+    background-color: #030712; /* Ultra deep dark background */
+    color: #f9fafb; 
+    overflow-x: hidden;
+}
+
+/* Futuristic Glass Panel Effect */
+.glass-panel { 
+    background: rgba(17, 24, 39, 0.4); 
+    backdrop-filter: blur(16px); 
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05); 
+}
+
+/* Neon Text Glow Effect */
+.neon-text { 
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.5), 0 0 40px rgba(6, 182, 212, 0.3); 
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+                          }
