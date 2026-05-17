@@ -1,38 +1,100 @@
 /*
-Theme Name: Nova Core Futuristic
-Theme URI: https://example.com/nova-core
+Theme Name: Nova Supreme Elite
+Theme URI: https://example.com/nova-supreme
 Author: World's No.1 Theme Designer
 Author URI: https://example.com
-Description: A top-tier, ultra-modern, futuristic WordPress theme featuring glassmorphism, neon accents, deep dark layouts, and high-end typography. Designed exclusively for a premium feel.
-Version: 1.0.0
+Description: Ek ultra-premium, high-end theme with custom cursor, smooth scroll animations, aur breathtaking typography. 
+Version: 2.0.0
 License: GNU General Public License v2 or later
-Text Domain: novacore
+Text Domain: novasupreme
 */
 
-/* NOTE: Ye theme styling ke liye "Tailwind CSS" use kar rahi hai jo automatically connect ho jayegi. 
-  Agar aapko koi extra custom CSS likhni hai jo theme mein add karni ho, toh wo aap yahan neeche likh sakte hain.
-*/
+/* NOTE: Yahan theme ki custom styling hai. Advanced animations aur premium feel ke liye isko design kiya gaya hai. */
 
-body { 
-    background-color: #030712; /* Ultra deep dark background */
-    color: #f9fafb; 
-    overflow-x: hidden;
-}
-
-/* Futuristic Glass Panel Effect */
-.glass-panel { 
-    background: rgba(17, 24, 39, 0.4); 
-    backdrop-filter: blur(16px); 
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.05); 
-}
-
-/* Neon Text Glow Effect */
-.neon-text { 
-    text-shadow: 0 0 10px rgba(6, 182, 212, 0.5), 0 0 40px rgba(6, 182, 212, 0.3); 
-}
-
-/* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
-                          }
+}
+
+body { 
+    background-color: #050505; /* Deep luxury black */
+    color: #e5e5e5; 
+    overflow-x: hidden;
+    /* Custom cursor active karne ke liye default cursor hide kar diya */
+    cursor: none; 
+}
+
+/* Premium Typography Classes */
+.font-heading {
+    font-family: 'Syne', sans-serif;
+}
+.font-body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom Cursor Styling */
+.cursor-dot,
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+}
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+}
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+/* Animated Aurora / Mesh Gradient Background */
+.aurora-bg {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15), transparent 60%),
+                radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.1), transparent 50%);
+    animation: rotateBg 20s linear infinite;
+    z-index: -1;
+    pointer-events: none;
+}
+
+@keyframes rotateBg {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Premium Image Hover Effect */
+.img-hover-zoom {
+    overflow: hidden;
+}
+.img-hover-zoom img {
+    transition: transform 0.8s ease;
+}
+.img-hover-zoom:hover img {
+    transform: scale(1.05);
+}
+
+/* Hide default scrollbar for a cleaner look */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #050505; 
+}
+::-webkit-scrollbar-thumb {
+    background: #333; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
